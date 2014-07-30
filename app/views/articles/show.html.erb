@@ -5,5 +5,15 @@
 <p>
 <% if user_signed_in? %>
 	<%= link_to "Edit", edit_article_path(@article) %>
+	<br/>
+	
+	 <%= @article.get_upvotes.size %>
+	<%= link_to "Upvote", like_article_path(@article), method: :put %> |
+	<%= @article.get_downvotes.size %>
+	<%= link_to "Downvote", dislike_article_path(@article), method: :put %>
+
+<% else %>
+	<%= @article.get_upvotes.size %> Upvotes |
+	<%= @article.get_downvotes.size %> Downvotes
 <% end %>
 </p>

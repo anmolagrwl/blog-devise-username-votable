@@ -3,3 +3,5 @@ https://github.com/plataformatec/devise
 http://stackoverflow.com/questions/16513066/devise-with-rails-4
 
 https://github.com/plataformatec/devise/wiki/How-To:-Allow-users-to-sign-in-using-their-username-or-email-address
+
+https://github.com/anmolonruby/acts_as_votable

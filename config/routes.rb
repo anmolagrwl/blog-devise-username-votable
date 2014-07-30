@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :articles
+  # resources :articles
   root to: 'articles#index'
+
+  resources :articles do
+    member do
+      put "like", to: "articles#upvote"
+      put "dislike", to: "articles#downvote"
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
